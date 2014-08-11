@@ -1,0 +1,6 @@
+a.out
+old/
+test_data/
+unmod/
+tests.cpp
+*.swp

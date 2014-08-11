@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Date</key><date>2014-07-25T00:07:33Z</date>
+	<key>Application Version</key><string>11.1.1</string>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Music Folder</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/</string>
+	<key>Library Persistent ID</key><string>4F87EC95154239B5</string>
+	<key>Tracks</key>
+	<dict>
+		<key>4687</key>
+		<dict>
+			<key>Track ID</key><integer>4687</integer>
+			<key>Name</key><string>A Candle's Fire</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>The Rip Tide</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4865103</integer>
+			<key>Total Time</key><integer>199392</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:12Z</date>
+			<key>Date Added</key><date>2012-05-17T13:47:11Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>79</integer>
+			<key>Play Date</key><integer>3488529910</integer>
+			<key>Play Date UTC</key><date>2014-07-18T16:05:10Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2013-05-19T01:21:49Z</date>
+			<key>Sort Album</key><string>Rip Tide</string>
+			<key>Sort Name</key><string>Candle's Fire</string>
+			<key>Persistent ID</key><string>448B3A8960569F23</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/The%20Rip%20Tide/01%20A%20Candle's%20Fire.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4689</key>
+		<dict>
+			<key>Track ID</key><integer>4689</integer>
+			<key>Name</key><string>East Harlem</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>The Rip Tide</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5807384</integer>
+			<key>Total Time</key><integer>238654</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:13Z</date>
+			<key>Date Added</key><date>2012-05-17T13:53:59Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>77</integer>
+			<key>Play Date</key><integer>3485940945</integer>
+			<key>Play Date UTC</key><date>2014-06-18T16:55:45Z</date>
+			<key>Skip Count</key><integer>9</integer>
+			<key>Skip Date</key><date>2013-08-13T17:25:55Z</date>
+			<key>Sort Album</key><string>Rip Tide</string>
+			<key>Persistent ID</key><string>7508D2D8C08C632C</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/The%20Rip%20Tide/03%20East%20Harlem.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4691</key>
+		<dict>
+			<key>Track ID</key><integer>4691</integer>
+			<key>Name</key><string>Goshen</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>The Rip Tide</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4885774</integer>
+			<key>Total Time</key><integer>200254</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:13Z</date>
+			<key>Date Added</key><date>2012-05-17T13:58:18Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>82</integer>
+			<key>Play Date</key><integer>3486391418</integer>
+			<key>Play Date UTC</key><date>2014-06-23T22:03:38Z</date>
+			<key>Skip Count</key><integer>10</integer>
+			<key>Skip Date</key><date>2013-08-24T02:03:40Z</date>
+			<key>Sort Album</key><string>Rip Tide</string>
+			<key>Persistent ID</key><string>6369630E60E5F35A</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/The%20Rip%20Tide/04%20Goshen.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4693</key>
+		<dict>
+			<key>Track ID</key><integer>4693</integer>
+			<key>Name</key><string>Port of Call</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>The Rip Tide</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6345927</integer>
+			<key>Total Time</key><integer>261093</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Year</key><integer>2011</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:13Z</date>
+			<key>Date Added</key><date>2012-05-17T14:17:58Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>72</integer>
+			<key>Play Date</key><integer>3488542269</integer>
+			<key>Play Date UTC</key><date>2014-07-18T19:31:09Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2013-07-10T13:55:42Z</date>
+			<key>Sort Album</key><string>Rip Tide</string>
+			<key>Persistent ID</key><string>E6B1CEE01BCECE3B</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/The%20Rip%20Tide/09%20Port%20of%20Call.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4695</key>
+		<dict>
+			<key>Track ID</key><integer>4695</integer>
+			<key>Name</key><string>Elephant Gun</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>Elephant Gun</string>
+			<key>Genre</key><string>World Indie</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>8364209</integer>
+			<key>Total Time</key><integer>346697</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>2007</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:12Z</date>
+			<key>Date Added</key><date>2012-05-17T14:18:08Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>60</integer>
+			<key>Play Date</key><integer>3488955862</integer>
+			<key>Play Date UTC</key><date>2014-07-23T14:24:22Z</date>
+			<key>Skip Count</key><integer>4</integer>
+			<key>Skip Date</key><date>2012-08-11T16:31:48Z</date>
+			<key>Persistent ID</key><string>2806C3109E60F23F</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/Elephant%20Gun/01%20Elephant%20Gun.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4699</key>
+		<dict>
+			<key>Track ID</key><integer>4699</integer>
+			<key>Name</key><string>La Banlieue</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>The Flying Club Cup</string>
+			<key>Genre</key><string>World Indie</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>1901888</integer>
+			<key>Total Time</key><integer>117533</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>13</integer>
+			<key>Year</key><integer>2007</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:12Z</date>
+			<key>Date Added</key><date>2012-05-19T17:47:06Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>78</integer>
+			<key>Play Date</key><integer>3481024635</integer>
+			<key>Play Date UTC</key><date>2014-04-22T19:17:15Z</date>
+			<key>Sort Album</key><string>Flying Club Cup</string>
+			<key>Persistent ID</key><string>773F049123E411B9</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/The%20Flying%20Club%20Cup/05%20La%20Banlieue.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4701</key>
+		<dict>
+			<key>Track ID</key><integer>4701</integer>
+			<key>Name</key><string>Scenic World</string>
+			<key>Artist</key><string>Beirut</string>
+			<key>Album Artist</key><string>Beirut</string>
+			<key>Album</key><string>Gulag Orkestar</string>
+			<key>Genre</key><string>World Indie</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5139897</integer>
+			<key>Total Time</key><integer>128391</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Year</key><integer>2006</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:12Z</date>
+			<key>Date Added</key><date>2012-05-19T17:52:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> </string>
+			<key>Play Count</key><integer>40</integer>
+			<key>Play Date</key><integer>3486314151</integer>
+			<key>Play Date UTC</key><date>2014-06-23T00:35:51Z</date>
+			<key>Skip Count</key><integer>11</integer>
+			<key>Skip Date</key><date>2013-06-03T03:43:12Z</date>
+			<key>Persistent ID</key><string>496FACE01CA72DD5</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Beirut/Gulag%20Orkestar/07%20Scenic%20World.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4705</key>
+		<dict>
+			<key>Track ID</key><integer>4705</integer>
+			<key>Name</key><string>Oh Sailor</string>
+			<key>Artist</key><string>Fiona Apple</string>
+			<key>Album</key><string>Extraordinary Machine</string>
+			<key>Genre</key><string>Alternative</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>9504230</integer>
+			<key>Total Time</key><integer>396512</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Track Count</key><integer>11</integer>
+			<key>Year</key><integer>2003</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:37Z</date>
+			<key>Date Added</key><date>2012-05-19T17:59:28Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>4</integer>
+			<key>Play Date</key><integer>3443197439</integer>
+			<key>Play Date UTC</key><date>2013-02-08T23:43:59Z</date>
+			<key>Skip Count</key><integer>15</integer>
+			<key>Skip Date</key><date>2013-03-27T11:23:13Z</date>
+			<key>Persistent ID</key><string>B7BC943DDB6A37B1</string>
+			<key>Disabled</key><true/>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Fiona%20Apple/Extraordinary%20Machine/06%20Oh%20Sailor.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4707</key>
+		<dict>
+			<key>Track ID</key><integer>4707</integer>
+			<key>Name</key><string>Window</string>
+			<key>Artist</key><string>Fiona Apple</string>
+			<key>Album</key><string>Extraordinary Machine</string>
+			<key>Genre</key><string>Alternative</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6758594</integer>
+			<key>Total Time</key><integer>281939</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Track Count</key><integer>11</integer>
+			<key>Year</key><integer>2003</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:37Z</date>
+			<key>Date Added</key><date>2012-05-19T17:59:28Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>3</integer>
+			<key>Play Date</key><integer>3426860586</integer>
+			<key>Play Date UTC</key><date>2012-08-03T21:43:06Z</date>
+			<key>Skip Count</key><integer>6</integer>
+			<key>Skip Date</key><date>2012-08-02T21:06:41Z</date>
+			<key>Persistent ID</key><string>574A032E60DCFE7E</string>
+			<key>Disabled</key><true/>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Fiona%20Apple/Extraordinary%20Machine/08%20Window.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4709</key>
+		<dict>
+			<key>Track ID</key><integer>4709</integer>
+			<key>Name</key><string>Extraordinary Machine</string>
+			<key>Artist</key><string>Fiona Apple</string>
+			<key>Album</key><string>Extraordinary Machine</string>
+			<key>Genre</key><string>Alternative</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5447909</integer>
+			<key>Total Time</key><integer>226821</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Track Count</key><integer>11</integer>
+			<key>Year</key><integer>2003</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:38Z</date>
+			<key>Date Added</key><date>2012-05-19T17:59:28Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>71</integer>
+			<key>Play Date</key><integer>3487591091</integer>
+			<key>Play Date UTC</key><date>2014-07-07T19:18:11Z</date>
+			<key>Skip Count</key><integer>9</integer>
+			<key>Skip Date</key><date>2013-10-23T20:23:41Z</date>
+			<key>Persistent ID</key><string>223FABEE0ECFD3F0</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Fiona%20Apple/Extraordinary%20Machine/10%20Extraordinary%20Machine.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4711</key>
+		<dict>
+			<key>Track ID</key><integer>4711</integer>
+			<key>Name</key><string>Helena</string>
+			<key>Artist</key><string>My Chemical Romance</string>
+			<key>Composer</key><string>My Chemical Romance</string>
+			<key>Album</key><string>Three Cheers For Sweet Revenge</string>
+			<key>Genre</key><string>Alternative &#38; Punk</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>8117993</integer>
+			<key>Total Time</key><integer>202893</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>13</integer>
+			<key>Year</key><integer>2004</integer>
+			<key>Date Modified</key><date>2013-08-16T03:00:16Z</date>
+			<key>Date Added</key><date>2012-05-19T18:04:37Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>40</integer>
+			<key>Play Date</key><integer>3479370774</integer>
+			<key>Play Date UTC</key><date>2014-04-03T15:52:54Z</date>
+			<key>Skip Count</key><integer>6</integer>
+			<key>Skip Date</key><date>2014-07-14T19:23:05Z</date>
+			<key>Persistent ID</key><string>356D3823F2E92837</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/My%20Chemical%20Romance/Three%20Cheers%20For%20Sweet%20Revenge/01%20Helena.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4721</key>
+		<dict>
+			<key>Track ID</key><integer>4721</integer>
+			<key>Name</key><string>Every Single Night</string>
+			<key>Artist</key><string>Fiona Apple</string>
+			<key>Album</key><string>The Idler Wheel is wiser than the Driver of the Screw, and Whipping Cords will serve you more than Ropes will ever do</string>
+			<key>Genre</key><string>Alternative</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>8568629</integer>
+			<key>Total Time</key><integer>213446</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>2012</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:38Z</date>
+			<key>Date Added</key><date>2012-05-19T18:28:48Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>www.ilovemusicpop.org</string>
+			<key>Play Count</key><integer>53</integer>
+			<key>Play Date</key><integer>3485853982</integer>
+			<key>Play Date UTC</key><date>2014-06-17T16:46:22Z</date>
+			<key>Skip Count</key><integer>13</integer>
+			<key>Skip Date</key><date>2014-07-22T19:58:49Z</date>
+			<key>Sort Album</key><string>Idler Wheel is wiser than the Driver of the Screw, and Whipping Cords will serve you more than Ropes will ever do</string>
+			<key>Persistent ID</key><string>8CDFF64183DC3B68</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Fiona%20Apple/The%20Idler%20Wheel%20is%20wiser%20than%20the%20Driver/01%20Every%20Single%20Night.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4727</key>
+		<dict>
+			<key>Track ID</key><integer>4727</integer>
+			<key>Name</key><string>Cirno's Perfect Math Class</string>
+			<key>Artist</key><string>marasy8</string>
+			<key>Album</key><string>Asian Pianists</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4621916</integer>
+			<key>Total Time</key><integer>288208</integer>
+			<key>Date Modified</key><date>2013-08-16T03:03:35Z</date>
+			<key>Date Added</key><date>2012-05-19T18:45:03Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>57</integer>
+			<key>Play Date</key><integer>3488279104</integer>
+			<key>Play Date UTC</key><date>2014-07-15T18:25:04Z</date>
+			<key>Skip Count</key><integer>4</integer>
+			<key>Skip Date</key><date>2014-03-19T16:54:17Z</date>
+			<key>Persistent ID</key><string>5357568F884C8721</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/marasy8/Asian%20Pianists/Cirno's%20Perfect%20Math%20Class.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4729</key>
+		<dict>
+			<key>Track ID</key><integer>4729</integer>
+			<key>Name</key><string>_________'00s'90s'80s_______________</string>
+			<key>Artist</key><string>marasy8</string>
+			<key>Album</key><string>Asian Pianists</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6747082</integer>
+			<key>Total Time</key><integer>421041</integer>
+			<key>Date Modified</key><date>2013-08-16T03:03:36Z</date>
+			<key>Date Added</key><date>2012-05-19T18:47:00Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>86</integer>
+			<key>Play Date</key><integer>3483002785</integer>
+			<key>Play Date UTC</key><date>2014-05-15T16:46:25Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2014-04-26T23:00:03Z</date>
+			<key>Persistent ID</key><string>60BB9D5E53F162AF</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/marasy8/Asian%20Pianists/_________'00s'90s'80s_______________.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4731</key>
+		<dict>
+			<key>Track ID</key><integer>4731</integer>
+			<key>Name</key><string>Marasy's Jazz Ensemble</string>
+			<key>Artist</key><string>marasy8</string>
+			<key>Album</key><string>Asian Pianists</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5401410</integer>
+			<key>Total Time</key><integer>336927</integer>
+			<key>Date Modified</key><date>2013-08-16T03:03:36Z</date>
+			<key>Date Added</key><date>2012-05-19T18:51:31Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>41</integer>
+			<key>Play Date</key><integer>3485939449</integer>
+			<key>Play Date UTC</key><date>2014-06-18T16:30:49Z</date>
+			<key>Skip Count</key><integer>10</integer>
+			<key>Skip Date</key><date>2014-06-18T14:07:56Z</date>
+			<key>Persistent ID</key><string>12E6EA6E468F307A</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/marasy8/Asian%20Pianists/Marasy's%20Jazz%20Ensemble.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4733</key>
+		<dict>
+			<key>Track ID</key><integer>4733</integer>
+			<key>Name</key><string>Bad Apple</string>
+			<key>Artist</key><string>marasy8</string>
+			<key>Album</key><string>Asian Pianists</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3615188</integer>
+			<key>Total Time</key><integer>225306</integer>
+			<key>Date Modified</key><date>2013-08-16T03:03:35Z</date>
+			<key>Date Added</key><date>2012-05-19T18:51:31Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>36</integer>
+			<key>Play Date</key><integer>3482838645</integer>
+			<key>Play Date UTC</key><date>2014-05-13T19:10:45Z</date>
+			<key>Skip Count</key><integer>27</integer>
+			<key>Skip Date</key><date>2014-05-16T13:47:34Z</date>
+			<key>Persistent ID</key><string>D1C495D8B776C6C1</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/marasy8/Asian%20Pianists/Bad%20Apple.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4755</key>
+		<dict>
+			<key>Track ID</key><integer>4755</integer>
+			<key>Name</key><string>Boats &#38; Birds</string>
+			<key>Artist</key><string>Gregory And The Hawk</string>
+			<key>Composer</key><string>Meredith Godreau</string>
+			<key>Album</key><string>The Boats &#38; Birds EP</string>
+			<key>Genre</key><string>Alternative</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6965443</integer>
+			<key>Total Time</key><integer>174080</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>2006</integer>
+			<key>Date Modified</key><date>2013-08-16T03:03:39Z</date>
+			<key>Date Added</key><date>2012-06-02T05:51:50Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>64</integer>
+			<key>Play Date</key><integer>3480057096</integer>
+			<key>Play Date UTC</key><date>2014-04-11T14:31:36Z</date>
+			<key>Skip Count</key><integer>3</integer>
+			<key>Skip Date</key><date>2013-08-24T02:23:21Z</date>
+			<key>Sort Album</key><string>Boats &#38; Birds EP</string>
+			<key>Persistent ID</key><string>50584D63BC73A229</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Gregory%20And%20The%20Hawk/The%20Boats%20&#38;%20Birds%20EP/01%20Boats%20&#38;%20Birds.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4757</key>
+		<dict>
+			<key>Track ID</key><integer>4757</integer>
+			<key>Name</key><string>For the Best</string>
+			<key>Artist</key><string>Gregory And The Hawk</string>
+			<key>Album Artist</key><string>Gregory And The Hawk</string>
+			<key>Album</key><string>Leche</string>
+			<key>Genre</key><string>Indie Rock</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4089923</integer>
+			<key>Total Time</key><integer>139415</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2010</integer>
+			<key>Date Modified</key><date>2013-08-16T03:03:38Z</date>
+			<key>Date Added</key><date>2012-06-02T05:55:25Z</date>
+			<key>Bit Rate</key><integer>234</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>www.NewAlbumReleases.net</string>
+			<key>Play Count</key><integer>80</integer>
+			<key>Play Date</key><integer>3488965681</integer>
+			<key>Play Date UTC</key><date>2014-07-23T17:08:01Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2013-08-24T02:12:07Z</date>
+			<key>Persistent ID</key><string>6F8897679CDE4430</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Gregory%20And%20The%20Hawk/Leche/01%20For%20the%20Best.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4759</key>
+		<dict>
+			<key>Track ID</key><integer>4759</integer>
+			<key>Name</key><string>Skinny Love</string>
+			<key>Artist</key><string>Bon Iver</string>
+			<key>Album Artist</key><string>Bon Iver</string>
+			<key>Album</key><string>For Emma, Forever Ago</string>
+			<key>Genre</key><string>Folk</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6803584</integer>
+			<key>Total Time</key><integer>238576</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>2008</integer>
+			<key>Date Modified</key><date>2013-08-16T03:02:27Z</date>
+			<key>Date Added</key><date>2012-06-02T05:58:43Z</date>
+			<key>Bit Rate</key><integer>227</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>48</integer>
+			<key>Play Date</key><integer>3481313430</integer>
+			<key>Play Date UTC</key><date>2014-04-26T03:30:30Z</date>
+			<key>Skip Count</key><integer>5</integer>
+			<key>Skip Date</key><date>2013-08-23T18:11:53Z</date>
+			<key>Persistent ID</key><string>7946A8D97160D1AD</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Bon%20Iver/For%20Emma,%20Forever%20Ago/03%20Skinny%20Love.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>4763</key>
+		<dict>
+			<key>Track ID</key><integer>4763</integer>
+			<key>Name</key><string>Stacy's Mom</string>
+			<key>Artist</key><string>Fountains Of Wayne</string>
+			<key>Album Artist</key><string>Fountains of Wayne</string>
+			<key>Composer</key><string>Adam Schlesinger/Chris Collingwood</string>
+			<key>Album</key><string>Welcome Interstate Managers</string>
+			<key>Genre</key><string>Pop</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4750600</integer>
+			<key>Total Time</key><integer>198034</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>2003</integer>
+			<key>Date Modified</key><date>2013-08-16T02:59:40Z</date>
+			<key>Date Added</key><date>2012-06-02T06:03:59Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string>YEAR: 2003</string>
+			<key>Play Count</key><integer>44</integer>
+			<key>Play Date</key><integer>3487667363</integer>
+			<key>Play Date UTC</key><date>2014-07-08T16:29:23Z</date>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2012-11-15T20:56:26Z</date>
+			<key>Persistent ID</key><string>D8B58EFC5B9B7FF8</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/matt/hdd/music/library/iTunes/iTunes%20Media/Music/Fountains%20of%20Wayne/Welcome%20Interstate%20Managers/03%20Stacy's%20Mom.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+	</dict>
+	<key>Playlists</key>
+	<array>
+		<dict>
+			<key>Name</key><string>Library</string>
+			<key>Master</key><true/>
+			<key>Playlist ID</key><integer>5857</integer>
+			<key>Playlist Persistent ID</key><string>7DFC9FB0637CBB6E</string>
+			<key>Visible</key><false/>
+			<key>All Items</key><true/>
+			<key>Playlist Items</key>
+                        <array>
+                                <dict>
+                                        <key>Track ID</key><integer>4687</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4689</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4691</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4693</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4695</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4699</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4701</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4705</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4707</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4709</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4711</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4721</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4727</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4729</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4731</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4733</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4755</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4757</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4759</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4763</integer>
+                                </dict>
+                        </array>
+		</dict>
+		<dict>
+			<key>Name</key><string>Music</string>
+			<key>Playlist ID</key><integer>7689</integer>
+			<key>Playlist Persistent ID</key><string>41EEC53337253CEB</string>
+			<key>Distinguished Kind</key><integer>4</integer>
+			<key>Music</key><true/>
+			<key>All Items</key><true/>
+			<key>Playlist Items</key>
+                        <array>
+                                <dict>
+                                        <key>Track ID</key><integer>4687</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4689</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4691</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4693</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4695</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4699</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4701</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4705</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4707</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4709</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4711</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4721</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4727</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4729</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4731</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4733</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4755</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4757</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4759</integer>
+                                </dict>
+                                <dict>
+                                        <key>Track ID</key><integer>4763</integer>
+                                </dict>
+                        </array>
+		</dict>
+	</array>
+</dict>
+</plist>
