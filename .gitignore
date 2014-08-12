@@ -4,3 +4,4 @@ test_data/
 unmod/
 tests.cpp
 *.swp
+.fuse*
