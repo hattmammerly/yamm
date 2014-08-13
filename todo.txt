@@ -63,3 +63,8 @@ tracks_playlists
 stretch goals
 ===
 maybe some day the music manager could support movie/tv cataloging or we
+
+notes
+===
+- remember to call setlocale (LC_ALL, ""); first thing in ncurses when working
+with unicode. #include <locale.h>

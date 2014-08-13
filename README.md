@@ -1,13 +1,13 @@
-i needed a new music manager so i decided to start writing one
+i needed a new music manager so i decided to start writing one  
 here's my 'first commit' readme
 
 plans
 ===
 - migrate an itunes music library to postgresql, or export its playlists to arbitrary formats
-- - already done in python; check out my pythonplaylistparser repository if that's all you want
+    - already done in python; check out my pythonplaylistparser repository if that's all you want
 - manage library and playlists on linooks in an ncurses interface, play music through mpd
 - sync music to my android phone
-- - probably will involve something android-side. maybe i'll write a player app there since the four my phone came with are all broken
+    - probably will involve something android-side. maybe i'll write a player app there since the four my phone came with are all broken
 
 what's done
 ===
