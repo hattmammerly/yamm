@@ -96,7 +96,7 @@ std::string replaceSubstring( std::string& str, std::string from, std::string to
     if (index == std::string::npos) {
         return str;
     }
-    str.replace(index, to.length(), to);
+    str.replace(index, from.length(), to);
     return str;
 }
 
@@ -137,11 +137,12 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
         PQexec( conn, query.c_str() );
 
         // print to make sure everything looks okay
+        /*
         puts( "===========" );
         puts( query.c_str() );
         puts( PQerrorMessage( conn ) );
         puts( case_sensitive_path.c_str() );
-        puts( "" );
+        puts( "" );//*/
         // curl wants me to
         curl_free( filepath );
     }
