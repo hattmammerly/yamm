@@ -105,8 +105,7 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
 
     int length = 0;
     //char* old_library_path = curl_easy_unescape( curl, ((PList::String*)(*library)["Music Folder"])->GetValue().c_str(), 0, &length );
-    const char* old_library_path = ((PList::String*)(*library)["Music Folder"])->GetValue().c_str();
-    puts( old_library_path );
+    std::string old_library_path = ((PList::String*)(*library)["Music Folder"])->GetValue();
 
     PList::Dictionary* tracks = (PList::Dictionary*) ( library->Find("Tracks")->second );
     PList::Array* playlists = (PList::Array*) ( library->Find("Playlists")->second );
