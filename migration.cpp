@@ -11,9 +11,6 @@
 char* library_file = "/home/matt/hdd/dev/yamm/test_data/iTunes Library.xml";
 std::string new_library_path = "/home/matt/hdd/dev/yamm/test_data/";
 
-char* unicode = "大好きな東方の曲をメドレーにして弾いてみた【ピアノ】";
-std::string uni = "大好きな東方の曲をメドレーにして弾いてみた【ピアノ】";
-
 int main() {
     PGconn *conn;
     PGresult *res;
@@ -21,6 +18,8 @@ int main() {
     int row;
     int col;
 
+    // yeah yeah credentials on github these are going to be deleted later
+    // i'm not even at the 'it works on my machine' phase yet
     conn = PQconnectdb("dbname=music host=localhost user=music password=x8sNVfWqVFuQIxzfCZxk");
     if (PQstatus(conn) == CONNECTION_BAD) {
         puts("fail");
@@ -32,11 +31,10 @@ int main() {
     createTables(conn);
 
     PList::Dictionary* library = openLibrary( library_file );
-    migrateLibrary( conn, library );
+    //migrateLibrary( conn, library );
+    puts( test_caseSensitivePath().c_str() );
 
     puts( PQerrorMessage(conn) );
-    puts( unicode );
-    std::cout << uni << std::endl;
 
     return 0;
 }
@@ -148,10 +146,30 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
     }
 
     //curl_free( old_library_path );
+
     curl_easy_cleanup( curl );
     return 0;
 }
 
 std::string caseSensitivePath( std::string old_path ) {
-    return old_path; // this is temporary, i just wanna see how far i get
+    std::string correct_path = new_library_path;
+    std::string incorrect_path = old_path.substr( new_library_path.length() );
+    int slash_index;
+    puts( new_library_path.c_str() );
+    for (int i = 1; i < incorrect_path.length(); ++i) {
+        if (incorrect_path[i] == '/' && incorrect_path[i-1] != '\\') {
+            slash_index = i;
+            correct_path.append( incorrect_path.substr(0, i) ); // not really
+            puts( incorrect_path.substr(0, i).c_str() );
+            incorrect_path = incorrect_path.substr(i);
+        }
+    }
+    correct_path.append( incorrect_path ); // all that remains now is the filename; case-sensitize
+
+    return correct_path;
+}
+
+std::string test_caseSensitivePath() {
+    std::string path_to_test = "/home/matt/hdd/dev/yamm/test_data/Beirut/The Rip Tide/01 A candle's Fire.mp3"; // should be capital C
+    return caseSensitivePath( path_to_test );
 }

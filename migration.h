@@ -22,4 +22,8 @@ std::string replaceSubstring( std::string& str, std::string from, std::string to
 
 std::string caseSensitivePath( std::string old_path );
 
+std::string caseSensitivePath( std::string old_path );
+
+std::string test_caseSensitivePath();
+
 #endif
