@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <curl/curl.h>
-#include <sys/stat.h>
 #include <plist/plist++.h>
 #include <dirent.h>
 #include <sys/types.h>
@@ -12,6 +11,7 @@
 #include <cstring>
 #include "migration.h"
 
+// this stuff will be in some config file in the future along with db credentials
 char* library_file = "/home/matt/hdd/dev/yamm/test_data/iTunes Library.xml";
 std::string new_library_path = "/home/matt/hdd/dev/yamm/test_data/";
 
@@ -36,8 +36,6 @@ int main() {
 
     PList::Dictionary* library = openLibrary( library_file );
     migrateLibrary( conn, library );
-
-    // should return "/home/matt/hdd/dev/yamm/test_data/Beirut/The Rip Tide/01 A Candle's Fire.mp3" with capital C
 
     /*// test caseSensitiveFilePath()
     puts( "/home/matt/hdd/dev/yamm/test_data/Beirut/The Rip Tide/01 A candle's Fire.mp3" );
@@ -126,29 +124,37 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
         std::string encoded_location = ((PList::String*)((*track)["Location"]))->GetValue();
         replaceSubstring( encoded_location, old_library_path, new_library_path );
 
-        // decode the URI so it can be run through stat and mean something
+        // decode the URI so it can actually be identified on the disk
         char* filepath = curl_easy_unescape( curl, encoded_location.c_str(), 0, &length );
 
         // find case sensitive path; coming from NTFS to a case-sensitive filesystem will break things
         std::string case_sensitive_path = caseSensitiveFilePath( filepath );
 
-        // build the query
-        std::string query = "INSERT INTO tracks (itunes_id, location) VALUES (";
-        char* escaped_itunes_id = PQescapeLiteral( conn, itunes_id.c_str(), itunes_id.length() );
-        char* escaped_case_sensitive_path = PQescapeLiteral( conn, case_sensitive_path.c_str(), case_sensitive_path.length() );
-        query.append( escaped_itunes_id );
-        query.append( ", " );
-        query.append( escaped_case_sensitive_path );
-        query.append( ")" );
-
-        // add the track to the database
-        PQexec( conn, query.c_str() );
+        // add the track
+        addTrackToDatabase( conn, itunes_id, case_sensitive_path, 0 );
 
         // curl wants me to
         curl_free( filepath );
     }
 
     curl_easy_cleanup( curl );
+    return 0;
+}
+
+// pulled into own function because it's probably going to be a function in common with other programs
+int addTrackToDatabase( PGconn* conn, std::string itunes_id, std::string filepath, int flag) {
+    // if i do anything with `flag` it will actually probably be calculated in here and not passed as a parameter
+    std::string query = "INSERT INTO tracks (itunes_id, location, flag) VALUES (";
+    char* escaped_itunes_id = PQescapeLiteral( conn, itunes_id.c_str(), itunes_id.length() );
+    char* escaped_filepath = PQescapeLiteral( conn, filepath.c_str(), filepath.length() );
+    query.append( escaped_itunes_id );
+    query.append( "," );
+    query.append( escaped_filepath );
+    query.append( "," );
+    query.append( std::to_string(flag) );
+    query.append( ")" );
+
+    PQexec( conn, query.c_str() );
     return 0;
 }
 

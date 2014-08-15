@@ -22,6 +22,8 @@ PList::Dictionary* openLibrary(char*);
 
 int migrateLibrary( PGconn* conn, PList::Dictionary*);
 
+int addTrackToDatabase( PGconn*, std::string, std::string, int);
+
 std::string replaceSubstring( std::string&, std::string, std::string);
 
 std::string caseSensitiveFolderChild( std::string, std::string );

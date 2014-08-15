@@ -19,8 +19,8 @@ applications to meet this end
 
 - migration assistant
 - - reads itunes's xml plist
-- - port the playlist template engine from python (or not???)
-- - - write a new .sql template for setting up a db schema! DRY amirite
+- - - case-sensitize filepaths and import to postgres
+- - port the playlist template engine from python
 
 - syncing application
 - - paired with an android phone over wifi
