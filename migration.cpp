@@ -11,9 +11,13 @@
 #include <cstring>
 #include "migration.h"
 
-// this stuff will be in some config file in the future along with db credentials
+// this stuff will be in some config file in the future
 char* library_file = "/home/matt/hdd/dev/yamm/test_data/iTunes Library.xml";
 std::string new_library_path = "/home/matt/hdd/dev/yamm/test_data/";
+char* database_name = "music";
+char* database_host = "localhost";
+char* database_user = "music";
+char* database_pw = "x8sNVfWqVFuQIxzfCZxk";
 
 int main() {
     PGconn *conn;
@@ -24,7 +28,9 @@ int main() {
 
     // yeah yeah credentials on github these are going to be deleted later
     // i'm not even at the 'it works on my machine' phase yet
-    conn = PQconnectdb("dbname=music host=localhost user=music password=x8sNVfWqVFuQIxzfCZxk");
+    char connection_string [512];
+    snprintf( connection_string, 512, "dbname=%s host=%s user=%s password=%s", database_name, database_host, database_user, database_pw );
+    conn = PQconnectdb( connection_string );
     if (PQstatus(conn) == CONNECTION_BAD) {
         puts("fail");
         exit(0);

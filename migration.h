@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <curl/curl.h>
-#include <sys/stat.h>
 #include <plist/plist++.h>
 #include <dirent.h>
 #include <sys/types.h>
