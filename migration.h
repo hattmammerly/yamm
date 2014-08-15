@@ -9,21 +9,23 @@
 #include <curl/curl.h>
 #include <sys/stat.h>
 #include <plist/plist++.h>
+#include <dirent.h>
+#include <sys/types.h>
+#include <cctype>
+#include <cstring>
 
-int dropTables(PGconn* conn);
+int dropTables(PGconn*);
 
-int createTables(PGconn* conn);
+int createTables(PGconn*);
 
-PList::Dictionary* openLibrary(char* filepath);
+PList::Dictionary* openLibrary(char*);
 
-int migrateLibrary( PGconn* conn, PList::Dictionary* library );
+int migrateLibrary( PGconn* conn, PList::Dictionary*);
 
-std::string replaceSubstring( std::string& str, std::string from, std::string to );
+std::string replaceSubstring( std::string&, std::string, std::string);
 
-std::string caseSensitivePath( std::string old_path );
+std::string caseSensitiveFolderChild( std::string, std::string );
 
-std::string caseSensitivePath( std::string old_path );
-
-std::string test_caseSensitivePath();
+std::string caseSensitiveFilePath( std::string );
 
 #endif
