@@ -12,6 +12,7 @@
 #include <sys/types.h>
 #include <cctype>
 #include <cstring>
+#include "db.h"
 
 int dropTables(PGconn*);
 
@@ -21,11 +22,11 @@ PList::Dictionary* openLibrary(char*);
 
 int migrateLibrary( PGconn* conn, PList::Dictionary* );
 
-PGresult* addTrackToDatabase( PGconn*, std::string, std::string, int );
+//PGresult* addTrackToDatabase( PGconn*, std::string, std::string, int );
 
-PGresult* addPlaylistToDatabase( PGconn*, std::string, std::string, int );
+//PGresult* addPlaylistToDatabase( PGconn*, std::string, std::string, int );
 
-PGresult* appendTrackToPlaylist( PGconn*, std::string, std::string );
+//PGresult* appendTrackToPlaylist( PGconn*, std::string, std::string );
 
 std::string replaceSubstring( std::string&, std::string, std::string );
 

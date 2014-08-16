@@ -1,6 +1,5 @@
 #include <postgresql/libpq-fe.h>
 #include <string>
-#include <vector>
 #include <fstream>
 #include <stdio.h>
 #include <iostream>
@@ -11,6 +10,7 @@
 #include <cctype>
 #include <cstring>
 #include "migration.h"
+#include "db.h"
 
 // this stuff will be in some config file in the future
 char* library_file = "/home/matt/hdd/dev/yamm/test_data/iTunes Library.xml";
@@ -175,7 +175,7 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
     curl_easy_cleanup( curl );
     return 0;
 }
-
+/*
 // pulled into own function because it's probably going to be a function in common with other programs
 PGresult* addTrackToDatabase( PGconn* conn, std::string itunes_id, std::string filepath, int flag) {
     // if i do anything with `flag` it will actually probably be calculated in here and not passed as a parameter
@@ -222,7 +222,7 @@ PGresult* appendTrackToPlaylist( PGconn* conn, std::string track_id, std::string
 
     PGresult* res = PQexec( conn, query.c_str() );
     return res;
-}
+}//*/
 
 std::string caseSensitiveFolderChild( std::string folder, std::string target) {
     DIR* dir = opendir( folder.c_str() );
