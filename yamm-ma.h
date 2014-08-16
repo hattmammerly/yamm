@@ -1,5 +1,5 @@
-#ifndef MIGRATION_H
-#define MIGRATION_H
+#ifndef YAMM_MA_H
+#define YAMM_MA_H
 
 #include <postgresql/libpq-fe.h>
 #include <string>
@@ -21,12 +21,6 @@ int createTables(PGconn*);
 PList::Dictionary* openLibrary(char*);
 
 int migrateLibrary( PGconn* conn, PList::Dictionary* );
-
-//PGresult* addTrackToDatabase( PGconn*, std::string, std::string, int );
-
-//PGresult* addPlaylistToDatabase( PGconn*, std::string, std::string, int );
-
-//PGresult* appendTrackToPlaylist( PGconn*, std::string, std::string );
 
 std::string replaceSubstring( std::string&, std::string, std::string );
 
