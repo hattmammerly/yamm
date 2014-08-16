@@ -19,11 +19,15 @@ int createTables(PGconn*);
 
 PList::Dictionary* openLibrary(char*);
 
-int migrateLibrary( PGconn* conn, PList::Dictionary*);
+int migrateLibrary( PGconn* conn, PList::Dictionary* );
 
-int addTrackToDatabase( PGconn*, std::string, std::string, int);
+PGresult* addTrackToDatabase( PGconn*, std::string, std::string, int );
 
-std::string replaceSubstring( std::string&, std::string, std::string);
+PGresult* addPlaylistToDatabase( PGconn*, std::string, std::string, int );
+
+PGresult* appendTrackToPlaylist( PGconn*, std::string, std::string );
+
+std::string replaceSubstring( std::string&, std::string, std::string );
 
 std::string caseSensitiveFolderChild( std::string, std::string );
 

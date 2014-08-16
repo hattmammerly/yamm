@@ -1,5 +1,6 @@
 #include <postgresql/libpq-fe.h>
 #include <string>
+#include <vector>
 #include <fstream>
 #include <stdio.h>
 #include <iostream>
@@ -137,18 +138,46 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
         std::string case_sensitive_path = caseSensitiveFilePath( filepath );
 
         // add the track
-        addTrackToDatabase( conn, itunes_id, case_sensitive_path, 0 );
+        PGresult* res = addTrackToDatabase( conn, itunes_id, case_sensitive_path, 0 );
+        PQclear( res );
 
         // curl wants me to
         curl_free( filepath );
     }
 
+    // add playlists to database table
+    // some playlists in itunes library won't be music; figure out how to ignore them
+    // my test data is fine though so i'll proceed for now
+    for (int i = 0; i < ((PList::Structure*)playlists)->GetSize(); ++i) {
+        PList::Dictionary* playlist = (PList::Dictionary*) (*playlists)[i];
+        std::string playlist_itunes_id = ((PList::String*)(*playlist)["Playlist ID"])->GetValue();
+        std::string playlist_title = ((PList::String*)(*playlist)["Name"])->GetValue();
+        PGresult* res = addPlaylistToDatabase( conn, playlist_itunes_id, playlist_title, 0 );
+        char* playlist_internal_id = PQgetvalue( res, 0, 0 ); // only one record with one column should be in here
+
+        PList::Array* playlist_items = (PList::Array*) (*playlist)["Playlist Items"];
+        // iterate through tracks in the playlist
+        for (int i = 0; i < ((PList::Structure*)playlist_items)->GetSize(); ++i) {
+            PList::Dictionary* track = (PList::Dictionary*) (*playlist_items)[i];
+            int track_itunes_id = ((PList::Integer*)(*track)["Track ID"])->GetValue();
+            std::string query = "SELECT DISTINCT id FROM tracks WHERE itunes_id = ";
+            query.append( std::to_string( track_itunes_id ) );
+            PGresult* track_res = PQexec( conn, query.c_str() );
+            char* track_internal_id = PQgetvalue( track_res, 0, 0 );
+            PGresult* playlist_track_res = appendTrackToPlaylist( conn, std::string(track_internal_id), std::string(playlist_internal_id) );
+
+            PQclear(track_res);
+            PQclear(playlist_track_res);
+        }
+
+        PQclear( res );
+    }
     curl_easy_cleanup( curl );
     return 0;
 }
 
 // pulled into own function because it's probably going to be a function in common with other programs
-int addTrackToDatabase( PGconn* conn, std::string itunes_id, std::string filepath, int flag) {
+PGresult* addTrackToDatabase( PGconn* conn, std::string itunes_id, std::string filepath, int flag) {
     // if i do anything with `flag` it will actually probably be calculated in here and not passed as a parameter
     std::string query = "INSERT INTO tracks (itunes_id, location, flag) VALUES (";
     char* escaped_itunes_id = PQescapeLiteral( conn, itunes_id.c_str(), itunes_id.length() );
@@ -158,10 +187,41 @@ int addTrackToDatabase( PGconn* conn, std::string itunes_id, std::string filepat
     query.append( escaped_filepath );
     query.append( "," );
     query.append( std::to_string(flag) );
-    query.append( ")" );
+    query.append( ") RETURNING id" );
 
-    PQexec( conn, query.c_str() );
-    return 0;
+    PGresult* res = PQexec( conn, query.c_str() );
+    return res;
+}
+
+PGresult* addPlaylistToDatabase( PGconn* conn, std::string itunes_id, std::string title, int flag) {
+    std::string query = "INSERT INTO playlists (itunes_id, title, flag) VALUES (";
+    char* escaped_itunes_id = PQescapeLiteral( conn, itunes_id.c_str(), itunes_id.length() );
+    char* escaped_title = PQescapeLiteral( conn, title.c_str(), title.length() );
+    query.append( escaped_itunes_id );
+    query.append( "," );
+    query.append( escaped_title );
+    query.append( "," );
+    query.append( std::to_string(flag) );
+    query.append( ") RETURNING id" );
+
+    PGresult* res = PQexec( conn, query.c_str() );
+    return res;
+}
+
+// add track to playlist; 'position' yet to be implemented
+PGresult* appendTrackToPlaylist( PGconn* conn, std::string track_id, std::string playlist_id) {
+    std::string query = "INSERT INTO tracks_playlists (track_id, playlist_id, position) VALUES (";
+    char* escaped_track_id = PQescapeLiteral( conn, track_id.c_str(), track_id.length() );
+    char* escaped_playlist_id = PQescapeLiteral( conn, playlist_id.c_str(), playlist_id.length() );
+    query.append( escaped_track_id );
+    query.append( "," );
+    query.append( escaped_playlist_id );
+    query.append( "," );
+    query.append( std::to_string(0) );
+    query.append( ") RETURNING id" );
+
+    PGresult* res = PQexec( conn, query.c_str() );
+    return res;
 }
 
 std::string caseSensitiveFolderChild( std::string folder, std::string target) {
