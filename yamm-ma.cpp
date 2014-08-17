@@ -150,9 +150,9 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
     // my test data is fine though so i'll proceed for now
     for (int i = 0; i < ((PList::Structure*)playlists)->GetSize(); ++i) {
         PList::Dictionary* playlist = (PList::Dictionary*) (*playlists)[i];
-        std::string playlist_itunes_id = ((PList::String*)(*playlist)["Playlist ID"])->GetValue();
-        std::string playlist_title = ((PList::String*)(*playlist)["Name"])->GetValue();
-        PGresult* res = addPlaylistToDatabase( conn, playlist_itunes_id, playlist_title, 0 );
+        int playlist_itunes_id = ((PList::Integer*)((*playlist)["Playlist ID"]))->GetValue();
+        std::string playlist_title = ((PList::String*)((*playlist)["Name"]))->GetValue();
+        PGresult* res = addPlaylistToDatabase( conn, std::to_string(playlist_itunes_id), playlist_title, 0 );
         char* playlist_internal_id = PQgetvalue( res, 0, 0 ); // only one record with one column should be in here
 
         PList::Array* playlist_items = (PList::Array*) (*playlist)["Playlist Items"];
@@ -160,8 +160,9 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
         for (int i = 0; i < ((PList::Structure*)playlist_items)->GetSize(); ++i) {
             PList::Dictionary* track = (PList::Dictionary*) (*playlist_items)[i];
             int track_itunes_id = ((PList::Integer*)(*track)["Track ID"])->GetValue();
-            std::string query = "SELECT DISTINCT id FROM tracks WHERE itunes_id = ";
+            std::string query = "SELECT DISTINCT id FROM tracks WHERE itunes_id = '";
             query.append( std::to_string( track_itunes_id ) );
+            query.append( "'" );
             PGresult* track_res = PQexec( conn, query.c_str() );
             char* track_internal_id = PQgetvalue( track_res, 0, 0 );
             PGresult* playlist_track_res = appendTrackToPlaylist( conn, std::string(track_internal_id), std::string(playlist_internal_id) );
