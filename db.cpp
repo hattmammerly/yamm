@@ -35,15 +35,16 @@ PGresult* addPlaylistToDatabase( PGconn* conn, std::string itunes_id, std::strin
 
 // add track to playlist; 'position' yet to be implemented
 PGresult* appendTrackToPlaylist( PGconn* conn, std::string track_id, std::string playlist_id) {
-    std::string query = "INSERT INTO tracks_playlists (track_id, playlist_id, position) VALUES (";
+    std::string query = "INSERT INTO tracks_playlists (track_id, playlist_id, position) SELECT ";
     char* escaped_track_id = PQescapeLiteral( conn, track_id.c_str(), track_id.length() );
     char* escaped_playlist_id = PQescapeLiteral( conn, playlist_id.c_str(), playlist_id.length() );
     query.append( escaped_track_id );
     query.append( "," );
     query.append( escaped_playlist_id );
     query.append( "," );
-    query.append( std::to_string(0) );
-    query.append( ") RETURNING id" );
+    query.append( "(COALESCE(MAX(position),0) + 1) FROM tracks_playlists WHERE playlist_id=" );
+    query.append( escaped_playlist_id );
+    query.append( " RETURNING id" );
 
     PGresult* res = PQexec( conn, query.c_str() );
     return res;
