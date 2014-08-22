@@ -49,6 +49,16 @@ int main() {
     puts( caseSensitiveFilePath( "/home/matt/hdd/dev/yamm/test_data/Beirut/The Rip Tide/01 A candle's Fire.mp3" ).c_str() );
     //*/
 
+    /*// test fractional inserts into playlists
+    // SELECT * FROM tracks_playlists Link LEFT JOIN playlists Playlist ON Link.playlist_id = Playlist.id WHERE Playlist.title = 'testing fractional inserts' ORDER BY position;
+    PGresult* playlist_insert_test_res = addPlaylistToDatabase( conn, "", "testing fractional inserts", 0);
+    char* playlist_id = PQgetvalue( playlist_insert_test_res, 0, 0 );
+    PGresult* track_insert_res = appendTrackToPlaylist( conn, "1", playlist_id );
+    track_insert_res = appendTrackToPlaylist( conn, "2", playlist_id );
+    track_insert_res = appendTrackToPlaylist( conn, "4", playlist_id );
+    track_insert_res = addTrackToPlaylist( conn, "3", playlist_id, 2.5 );
+    //*/
+
     puts( PQerrorMessage(conn) );
 
     return 0;
