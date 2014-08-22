@@ -50,7 +50,7 @@ PGresult* appendTrackToPlaylist( PGconn* conn, std::string track_id, std::string
     return res;
 }
 
-PGresult* insertTrackIntoPlaylist( PGconn* conn, std::string track_id, std::string playlist_id, double position) {
+PGresult* addTrackToPlaylist( PGconn* conn, std::string track_id, std::string playlist_id, double position) {
     std::string query = "INSERT INTO tracks_playlists (track_id, playlist_id, position) VALUES (";
     char* escaped_track_id = PQescapeLiteral( conn, track_id.c_str(), track_id.length() );
     char* escaped_playlist_id = PQescapeLiteral( conn, playlist_id.c_str(), playlist_id.length() );
