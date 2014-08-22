@@ -84,7 +84,7 @@ int createTables(PGconn* conn) {
                 id SERIAL NOT NULL PRIMARY KEY,\
                 track_id INTEGER NOT NULL,\
                 playlist_id INTEGER NOT NULL,\
-                position INTEGER NOT NULL\
+                position FLOAT NOT NULL\
             )");
     return 0;
 }

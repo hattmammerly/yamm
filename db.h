@@ -10,4 +10,6 @@ PGresult* addPlaylistToDatabase( PGconn*, std::string, std::string, int );
 
 PGresult* appendTrackToPlaylist( PGconn*, std::string, std::string );
 
+PGresult* insertTrackIntoPlaylist( PGconn*, std::string, std::string, double);
+
 #endif
