@@ -57,6 +57,22 @@ int main() {
     track_insert_res = appendTrackToPlaylist( conn, "2", playlist_id );
     track_insert_res = appendTrackToPlaylist( conn, "4", playlist_id );
     track_insert_res = addTrackToPlaylist( conn, "3", playlist_id, 2.5 );
+    PQclear( playlist_insert_test_res );
+    PQclear( track_insert_res );
+    //*/
+
+    /*// test track removal from playlists
+    // SELECT * FROM tracks_playlists Link LEFT JOIN playlists Playlist ON Link.playlist_id = Playlist.id WHERE Playlist.title = 'testing track removal' ORDER BY position;
+    PGresult* playlist_insert_test_res = addPlaylistToDatabase( conn, "", "testing track removal", 0);
+    char* playlist_id = PQgetvalue( playlist_insert_test_res, 0, 0 );
+    PGresult* track_insert_res = appendTrackToPlaylist( conn, "1", playlist_id );
+    track_insert_res = appendTrackToPlaylist( conn, "2", playlist_id );
+    track_insert_res = appendTrackToPlaylist( conn, "4", playlist_id );
+    char* track_playlist_id = PQgetvalue( track_insert_res, 0, 0 );
+    track_insert_res = removeTrackFromPlaylist( conn, track_playlist_id );
+    track_insert_res = appendTrackToPlaylist( conn, "3", playlist_id );
+    PQclear( playlist_insert_test_res );
+    PQclear( track_insert_res );
     //*/
 
     puts( PQerrorMessage(conn) );
