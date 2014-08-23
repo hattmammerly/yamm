@@ -12,4 +12,6 @@ PGresult* appendTrackToPlaylist( PGconn*, std::string, std::string );
 
 PGresult* addTrackToPlaylist( PGconn*, std::string, std::string, double);
 
+PGresult* removeTrackFromPlaylist( PGconn*, std::string );
+
 #endif

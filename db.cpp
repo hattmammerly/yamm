@@ -64,3 +64,13 @@ PGresult* addTrackToPlaylist( PGconn* conn, std::string track_id, std::string pl
     PGresult* res = PQexec( conn, query.c_str() );
     return res;
 }
+
+PGresult* removeTrackFromPlaylist( PGconn* conn, std::string track_playlist_id ) {
+    std::string query = "DELETE FROM tracks_playlists WHERE id=";
+    char* escaped_track_playlist_id = PQescapeLiteral( conn, track_playlist_id.c_str(), track_playlist_id.length() );
+    query.append( escaped_track_playlist_id );
+    query.append( " RETURNING id" ); // why not
+
+    PGresult* res = PQexec( conn, query.c_str() );
+    return res;
+}
