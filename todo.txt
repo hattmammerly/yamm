@@ -69,3 +69,4 @@ with unicode. #include <locale.h>
 - so it turns out my library isn't entirely .mp3s and i'm not aware of any
   common libs for working with m4a and such metadata. must decide if metadata
   is to be stuffed in the database to be format-agnostic
+    - maybe http://taglib.github.io/ will do what i want
