@@ -33,7 +33,7 @@ PList::Dictionary* openLibrary(char*);
 
 int migrateLibrary( PGconn* conn, PList::Dictionary* );
 
-std::string replaceSubstring( std::string&, std::string, std::string );
+void replaceSubstring( std::string&, std::string, std::string );
 
 std::string caseSensitiveFolderChild( std::string, std::string );
 

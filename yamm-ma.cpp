@@ -160,16 +160,13 @@ PList::Dictionary* openLibrary(char* filepath) {
  * \param str The string of which a substring will be replaced
  * \param from The substring to replace
  * \param The string that gets substituted in
- *
- * \return The substituted string, even though it takes a reference so that's redundant.
  */
-std::string replaceSubstring( std::string& str, std::string from, std::string to ) {
+void replaceSubstring( std::string& str, std::string from, std::string to ) {
     int index = str.find(from, 0);
     if (index == std::string::npos) {
-        return str;
+        return;
     }
     str.replace(index, from.length(), to);
-    return str;
 }
 
 /**
