@@ -1,3 +1,14 @@
+/**
+ * \file yamm-ma.h
+ *
+ * \author Matt Hammerly
+ *
+ * \brief Contains functions for the migration assistant application
+ *
+ * Functions in this file are specific to the library migration assistant
+ * component of the application
+ */
+
 #ifndef YAMM_MA_H
 #define YAMM_MA_H
 

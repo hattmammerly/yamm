@@ -1,3 +1,9 @@
+/**
+ * \file yamm-ma.cpp
+ *
+ * \author Matt Hammerly
+ */
+
 #include <postgresql/libpq-fe.h>
 #include <string>
 #include <fstream>
@@ -20,6 +26,9 @@ char* database_host = "localhost";
 char* database_user = "music";
 char* database_pw = "x8sNVfWqVFuQIxzfCZxk";
 
+/**
+ * \brief Entry point into the program
+ */
 int main() {
     PGconn *conn;
     PGresult *res;
@@ -80,6 +89,10 @@ int main() {
     return 0;
 }
 
+/**
+ * \brief Drops all tables this appliciation uses
+ * \returns 0
+ */
 int dropTables(PGconn* conn) {
     PQexec(conn, "DROP TABLE IF EXISTS tracks");
     PQexec(conn, "DROP TABLE IF EXISTS playlists");
@@ -87,6 +100,10 @@ int dropTables(PGconn* conn) {
     return 0;
 }
 
+/**
+ * \brief Creates all tables this application uses
+ * \returns 0
+ */
 int createTables(PGconn* conn) {
     PQexec(conn,
             "create table tracks (\
@@ -115,6 +132,13 @@ int createTables(PGconn* conn) {
     return 0;
 }
 
+/**
+ * \brief Opens an iTunes Library plist file
+ *
+ * \param filepath Path to a iTunes Library.xml file
+ *
+ * \return libplist PList::Dictionary* representing the library
+ */
 PList::Dictionary* openLibrary(char* filepath) {
     // read xml file into string to create plist object with FromXml
     std::ifstream file( filepath ); // gotta try-catch yo
@@ -130,6 +154,15 @@ PList::Dictionary* openLibrary(char* filepath) {
     return library;
 }
 
+/**
+ * \brief Replaces the first occurence of a certain substring in a string
+ *
+ * \param str The string of which a substring will be replaced
+ * \param from The substring to replace
+ * \param The string that gets substituted in
+ *
+ * \return The substituted string, even though it takes a reference so that's redundant.
+ */
 std::string replaceSubstring( std::string& str, std::string from, std::string to ) {
     int index = str.find(from, 0);
     if (index == std::string::npos) {
@@ -139,6 +172,14 @@ std::string replaceSubstring( std::string& str, std::string from, std::string to
     return str;
 }
 
+/**
+ * \brief Adds tracks, playlists to database
+ *
+ * \param conn Pointer to the database connection object
+ * \param library Pointer to a libplist Dictionary object representing an iTunes library
+ *
+ * \return 0
+ */
 int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
     CURL* curl = curl_easy_init();
 
@@ -234,6 +275,18 @@ std::string caseSensitiveFolderChild( std::string folder, std::string target) {
     return ret;
 }
 
+/**
+ * \brief Case-sensitizes a filepath
+ *
+ * \param path_to_test Case-insensitive filepath
+ *
+ * \return Case-sensitive filepath
+ *
+ * This function doesn't yet handle failure. iTunes often records
+ * case-insensitive filepaths because it doesn't matter on NTFS
+ * or default HFS+. To use the playlists on a case-sensitive filesystem,
+ * accommodations must be made.
+ */
 std::string caseSensitiveFilePath( std::string path_to_test ) {
     std::string uncertain_path = path_to_test.substr( new_library_path.length() );
     std::string certain_path = new_library_path;

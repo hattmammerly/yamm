@@ -1,6 +1,7 @@
 a.out
 old/
 test_data/
+doc/
 unmod/
 tests.cpp
 *.swp

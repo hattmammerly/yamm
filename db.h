@@ -1,3 +1,14 @@
+/**
+ * \file db.h
+ * 
+ * \author Matt Hammerly
+ *
+ * \brief Defines functions for working with the music database
+ *
+ * Included in this file are functions for working with tracks
+ * and playlists in the music database this application creates and uses.
+ */
+
 #ifndef DB_H
 #define DB_H
 
