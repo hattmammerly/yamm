@@ -119,13 +119,53 @@ PGresult* addTrackToPlaylist( PGconn* conn, std::string track_id, std::string pl
  * \param conn Pointer to the database connection object
  * \param track_playlist_id ID of the track/playlist association record to be deleted
  *
- * \returns I honestly don't know. The ID of the deleted track/playlist association?
+ * \return I honestly don't know. The ID of the deleted track/playlist association?
  */
 PGresult* removeTrackFromPlaylist( PGconn* conn, std::string track_playlist_id ) {
     std::string query = "DELETE FROM tracks_playlists WHERE id=";
     char* escaped_track_playlist_id = PQescapeLiteral( conn, track_playlist_id.c_str(), track_playlist_id.length() );
     query.append( escaped_track_playlist_id );
     query.append( " RETURNING id" ); // why not
+
+    PGresult* res = PQexec( conn, query.c_str() );
+    return res;
+}
+
+/**
+ * \brief Remove a specified playlist from the database
+ *
+ * \param conn Pointer to the database connection object
+ * \param playlist_id Internal ID (not iTunes) of the playlist to be deleted
+ *
+ * This function removes the playlist record from the playlists table,
+ * and also all records of playlist membership from tracks_playlists
+ */
+PGresult* removePlaylistFromDatabase( PGconn* conn, std::string playlist_id ) {
+    std::string query = "DELETE FROM playlists WHERE id=";
+    char* escaped_playlist_id = PQescapeLiteral( conn, playlist_id.c_str(), playlist_id.length() );
+    query.append( escaped_playlist_id );
+    query.append( "; DELETE FROM tracks_playlists WHERE playlist_id=" );
+    query.append( escaped_playlist_id );
+
+    PGresult* res = PQexec( conn, query.c_str() );
+    return res;
+}
+
+/**
+ * \brief Remove a specified track from the database
+ *
+ * \param conn Pointer to the database connection object
+ * \param track_id Internal ID (not iTunes) of the track to be deleted
+ *
+ * This function removes the track record from the tracks table,
+ * and also all records of playlist membership from tracks_playlists
+ */
+PGresult* removeTrackFromDatabase( PGconn* conn, std::string track_id ) {
+    std::string query = "DELETE FROM tracks WHERE id=";
+    char* escaped_track_id = PQescapeLiteral( conn, track_id.c_str(), track_id.length() );
+    query.append( escaped_track_id );
+    query.append( "; DELETE FROM tracks_playlists WHERE track_id=" );
+    query.append( escaped_track_id );
 
     PGresult* res = PQexec( conn, query.c_str() );
     return res;
