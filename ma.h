@@ -1,5 +1,5 @@
 /**
- * \file yamm-ma.h
+ * \file ma.h
  *
  * \author Matt Hammerly
  *
@@ -29,7 +29,7 @@ int dropTables(PGconn*);
 
 int createTables(PGconn*);
 
-PList::Dictionary* openLibrary(char const*);
+PList::Dictionary* openLibrary();
 
 int migrateLibrary( PGconn* conn, PList::Dictionary* );
 
