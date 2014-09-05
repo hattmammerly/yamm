@@ -39,6 +39,9 @@ int main() {
     // test adding track to database
     test_addTrackToDatabase(conn);
 
+    // test adding playlist to database
+    test_addPlaylistToDatabase(conn);
+
     // test fractional inserts into playlists
     test_inserts(conn);
 
@@ -76,6 +79,22 @@ void test_addTrackToDatabase(PGconn* conn) {
 
     assert ( strcmp(track_id, expected_id) == 0 );
     puts ("addTrackToDatabase(...) works correctly!" );
+
+    PQclear(res);
+}
+
+/**
+ * \brief Test addPlaylistToDatabase(...)
+ *
+ * \param conn Pointer to database connection struct
+ */
+void test_addPlaylistToDatabase(PGconn* conn) {
+    PGresult* res = addPlaylistToDatabase( conn, "", "Test Playlist", 0 );
+    char *playlist_id = PQgetvalue( res, 0, 0 );
+    char const *expected_id = "1";
+
+    assert( strcmp( playlist_id, expected_id) == 0 );
+    puts ("addPlaylistToDatabase(...) works correctly!" );
 
     PQclear(res);
 }
