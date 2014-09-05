@@ -241,6 +241,20 @@ int migrateLibrary( PGconn* conn, PList::Dictionary* library ) {
     return 0;
 }
 
+/**
+ * \brief Case-sensitizes an item inside a folder
+ *
+ * \param folder The folder to search in
+ *
+ * \param target The child to search for
+ *
+ * \return Case-sensitive child item name
+ *
+ * This function doesn't yet handle failure. iTunes often records
+ * case-insensitive filepaths because it doesn't matter on NTFS
+ * or default HFS+. To use the playlists on a case-sensitive filesystem,
+ * accommodations must be made.
+ */
 std::string caseSensitiveFolderChild( std::string folder, std::string target) {
     DIR* dir = opendir( folder.c_str() );
     struct dirent* directory_on_disk = readdir( dir );
