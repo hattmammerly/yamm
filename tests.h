@@ -20,13 +20,13 @@
 #include <sys/types.h>
 #include <cctype>
 #include <cstring>
-#include "yamm-ma.h"
+#include "ma.h"
 #include "db.h"
 
 void test_caseSensitiveFilePath();
 
-void test_inserts();
+void test_inserts( PGconn* );
 
-void test_removal();
+void test_removal( PGconn* );
 
 #endif
