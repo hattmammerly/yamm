@@ -69,7 +69,6 @@ void test_caseSensitiveFilePath() {
  */
 void test_addTrackToDatabase(PGconn* conn) {
     std::string new_library_path = "/home/matt/hdd/dev/yamm/test_data/";
-    std::string wrong = new_library_path + "beirut/THe Rip tiDe/01 A candle's Fire.mp3";
 
     PGresult* res = addTrackToDatabase( conn, "", new_library_path + "Beirut/The Rip Tide/01 A Candle's Fire.mp3", 0 );
     char* track_id = PQgetvalue( res, 0, 0 );
