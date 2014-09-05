@@ -3,6 +3,5 @@ old/
 test_data/
 doc/
 unmod/
-tests.cpp
 *.swp
 .fuse*
