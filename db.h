@@ -15,6 +15,8 @@
 #include <postgresql/libpq-fe.h>
 #include <string>
 
+PGconn* connectToDatabase();
+
 PGresult* addTrackToDatabase( PGconn*, std::string, std::string, int );
 
 PGresult* addPlaylistToDatabase( PGconn*, std::string, std::string, int );

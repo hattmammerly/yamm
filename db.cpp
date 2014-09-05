@@ -8,6 +8,31 @@
 #include <string>
 #include "db.h"
 
+// yeah, yeah, database credentials hardcoded. this will be fixed
+const char *database_name = "music";
+const char *database_host = "localhost";
+const char *database_user = "music";
+const char *database_pw = "x8sNVfWqVFuQIxzfCZxk";
+
+/**
+ * \brief Connect to the database
+ *
+ * \return Pointer to connection struct
+ */
+PGconn* connectToDatabase() {
+    char connection_string [512];
+    snprintf( connection_string, 512, "dbname=%s host=%s user=%s password=%s", database_name, database_host, database_user, database_pw );
+    
+    PGconn *conn = PQconnectdb( connection_string );
+    
+    if (PQstatus(conn) == CONNECTION_BAD) {
+        puts("failed to connect to database");
+        exit(0);
+    }
+    
+    return conn;
+}
+
 /**
  * \brief Add a track to the 'tracks' table
  *
