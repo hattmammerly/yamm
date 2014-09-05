@@ -19,12 +19,12 @@
 #include "db.h"
 
 // this stuff will be in some config file in the future
-char* library_file = "/home/matt/hdd/dev/yamm/test_data/iTunes Library.xml";
+char const *library_file = "/home/matt/hdd/dev/yamm/test_data/iTunes Library.xml";
 std::string new_library_path = "/home/matt/hdd/dev/yamm/test_data/";
-char* database_name = "music";
-char* database_host = "localhost";
-char* database_user = "music";
-char* database_pw = "x8sNVfWqVFuQIxzfCZxk";
+char const *database_name = "music";
+char const *database_host = "localhost";
+char const *database_user = "music";
+char const *database_pw = "x8sNVfWqVFuQIxzfCZxk";
 
 /**
  * \brief Entry point into the program
@@ -139,7 +139,7 @@ int createTables(PGconn* conn) {
  *
  * \return libplist PList::Dictionary* representing the library
  */
-PList::Dictionary* openLibrary(char* filepath) {
+PList::Dictionary* openLibrary(char const *filepath) {
     // read xml file into string to create plist object with FromXml
     std::ifstream file( filepath ); // gotta try-catch yo
     file.seekg(0, std::ios::end);

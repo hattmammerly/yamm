@@ -29,7 +29,7 @@ int dropTables(PGconn*);
 
 int createTables(PGconn*);
 
-PList::Dictionary* openLibrary(char*);
+PList::Dictionary* openLibrary(char const*);
 
 int migrateLibrary( PGconn* conn, PList::Dictionary* );
 
