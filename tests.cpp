@@ -36,6 +36,9 @@ int main() {
     // test caseSensitiveFilePath()
     test_caseSensitiveFilePath();
 
+    // test adding track to database
+    test_addTrackToDatabase(conn);
+
     // test fractional inserts into playlists
     test_inserts(conn);
 
@@ -57,6 +60,25 @@ void test_caseSensitiveFilePath() {
 
     assert( caseSensitiveFilePath(wrong) == right );
     puts( "caseSensitiveFilePath() works correctly!" );
+}
+
+/**
+ * \brief Test addTrackToDatabase(...)
+ *
+ * \param conn Pointer to database connection struct
+ */
+void test_addTrackToDatabase(PGconn* conn) {
+    std::string new_library_path = "/home/matt/hdd/dev/yamm/test_data/";
+    std::string wrong = new_library_path + "beirut/THe Rip tiDe/01 A candle's Fire.mp3";
+
+    PGresult* res = addTrackToDatabase( conn, "", new_library_path + "Beirut/The Rip Tide/01 A Candle's Fire.mp3", 0 );
+    char* track_id = PQgetvalue( res, 0, 0 );
+    char const *expected_id = "1";
+
+    assert ( strcmp(track_id, expected_id) == 0 );
+    puts ("addTrackToDatabase(...) works correctly!" );
+
+    PQclear(res);
 }
 
 /**

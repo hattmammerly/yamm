@@ -25,6 +25,8 @@
 
 void test_caseSensitiveFilePath();
 
+void test_addTrackToDatabase( PGconn* );
+
 void test_inserts( PGconn* );
 
 void test_removal( PGconn* );
