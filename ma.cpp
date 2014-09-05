@@ -230,6 +230,8 @@ std::string caseSensitiveFolderChild( std::string folder, std::string target) {
  * case-insensitive filepaths because it doesn't matter on NTFS
  * or default HFS+. To use the playlists on a case-sensitive filesystem,
  * accommodations must be made.
+ * Since the user provides where the root of the music directory is, that
+ * is assumed to be case-correct.
  */
 std::string caseSensitiveFilePath( std::string path_to_test ) {
     std::string uncertain_path = path_to_test.substr( new_library_path.length() );
