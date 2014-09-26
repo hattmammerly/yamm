@@ -43,7 +43,7 @@ int main() {
     test_addPlaylistToDatabase(conn);
 
     // test fractional inserts into playlists
-    test_inserts(conn);
+    test_track_inserts(conn);
 
     // test track removal from playlists
     test_removal(conn);
@@ -103,15 +103,25 @@ void test_addPlaylistToDatabase(PGconn* conn) {
  * \brief Test appendTrackToPlaylist(...) and addTrackToPlaylist(...) functions
  *
  * \param conn Pointer to database connection struct
+ *
+ * Todo: check to make sure the fractional insert is ordered correctly
  */
-void test_inserts(PGconn* conn) {
+void test_track_inserts(PGconn* conn) {
     // SELECT * FROM tracks_playlists Link LEFT JOIN playlists Playlist ON Link.playlist_id = Playlist.id WHERE Playlist.title = 'testing fractional inserts' ORDER BY position;
     PGresult* playlist_insert_test_res = addPlaylistToDatabase( conn, "", "testing fractional inserts", 0);
     char* playlist_id = PQgetvalue( playlist_insert_test_res, 0, 0 );
     PGresult* track_insert_res = appendTrackToPlaylist( conn, "1", playlist_id );
+    char* association_id = PQgetvalue( track_insert_res, 0, 0 );
+    assert( strcmp( association_id, "1") == 0 );
     track_insert_res = appendTrackToPlaylist( conn, "2", playlist_id );
     track_insert_res = appendTrackToPlaylist( conn, "4", playlist_id );
+    association_id = PQgetvalue( track_insert_res, 0, 0 );
+    assert( strcmp(association_id, "3") == 0 );
+    puts ("appendTrackToPlaylist(...) works correctly!");
     track_insert_res = addTrackToPlaylist( conn, "3", playlist_id, 2.5 );
+    association_id = PQgetvalue( track_insert_res, 0, 0 );
+    assert( strcmp(association_id, "4") == 0 );
+    puts ("addTrackToPlaylist(...) works correctly!");
     PQclear( playlist_insert_test_res );
     PQclear( track_insert_res );
 }

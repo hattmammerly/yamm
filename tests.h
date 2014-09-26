@@ -29,7 +29,7 @@ void test_addTrackToDatabase( PGconn* );
 
 void test_addPlaylistToDatabase( PGconn* );
 
-void test_inserts( PGconn* );
+void test_track_inserts( PGconn* );
 
 void test_removal( PGconn* );
 
