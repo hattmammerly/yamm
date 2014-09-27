@@ -138,8 +138,11 @@ void test_removal(PGconn* conn) {
     PGresult* track_insert_res = appendTrackToPlaylist( conn, "1", playlist_id );
     track_insert_res = appendTrackToPlaylist( conn, "2", playlist_id );
     track_insert_res = appendTrackToPlaylist( conn, "4", playlist_id );
-    char* track_playlist_id = PQgetvalue( track_insert_res, 0, 0 );
-    track_insert_res = removeTrackFromPlaylist( conn, track_playlist_id );
+    char* association_id = PQgetvalue( track_insert_res, 0, 0 );
+    track_insert_res = removeTrackFromPlaylist( conn, association_id );
+    association_id = PQgetvalue( track_insert_res, 0, 0 );
+    assert( strcmp(association_id, "7") == 0 );
+    puts("removeTrackFromPlaylist(...) works correctly!");
     track_insert_res = appendTrackToPlaylist( conn, "3", playlist_id );
     PQclear( playlist_insert_test_res );
     PQclear( track_insert_res );
