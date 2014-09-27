@@ -144,7 +144,7 @@ PGresult* addTrackToPlaylist( PGconn* conn, std::string track_id, std::string pl
  * \param conn Pointer to the database connection object
  * \param track_playlist_id ID of the track/playlist association record to be deleted
  *
- * \return I honestly don't know. The ID of the deleted track/playlist association?
+ * \return The ID of the deleted track/playlist association
  */
 PGresult* removeTrackFromPlaylist( PGconn* conn, std::string track_playlist_id ) {
     std::string query = "DELETE FROM tracks_playlists WHERE id=";
