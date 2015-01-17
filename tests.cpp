@@ -48,6 +48,9 @@ int main() {
     // test track removal from playlists
     test_removal(conn);
 
+    // test playlist normalization
+    test_playlist_normalization(conn);
+
     puts( PQerrorMessage(conn) );
 
     return 0;
@@ -124,6 +127,34 @@ void test_track_inserts(PGconn* conn) {
     puts ("addTrackToPlaylist(...) works correctly!");
     PQclear( playlist_insert_test_res );
     PQclear( track_insert_res );
+}
+
+/**
+ * \brief Test normalizePlaylist(...) or whatever I called it
+ *
+ * \param conn Pointer to database connection struct
+ */
+void test_playlist_normalization(PGconn* conn) {
+    PGresult* playlist_insert_res = addPlaylistToDatabase( conn, "", "testing normalizing playlist", 0);
+    char* playlist_id = PQgetvalue( playlist_insert_res, 0, 0 );
+    PGresult* track_insert_res = addTrackToPlaylist( conn, "1", playlist_id, 0.5 );
+    char* association_id = PQgetvalue( track_insert_res, 0, 0 );
+    PGresult* normalize_playlist_res = normalizePlaylist( conn, std::string(playlist_id) );
+
+    char* association_id_2 = PQgetvalue( normalize_playlist_res, 0, 0 );
+    char* track_id = PQgetvalue( normalize_playlist_res, 0, 1 );
+    char* playlist_id_2 = PQgetvalue( normalize_playlist_res, 0, 2 );
+    char* position = PQgetvalue( normalize_playlist_res, 0, 3 );
+
+    assert( strcmp(association_id, association_id_2) == 0 );
+    assert( strcmp(track_id, "1") == 0 );
+    assert( strcmp(playlist_id, playlist_id_2) == 0 );
+    assert( strcmp(position, "1") == 0 );
+
+    puts ("normalizePlaylist(...) works correctly!");
+    PQclear( playlist_insert_res );
+    PQclear( track_insert_res );
+    PQclear( normalize_playlist_res );
 }
 
 /**

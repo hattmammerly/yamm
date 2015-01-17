@@ -33,4 +33,6 @@ void test_track_inserts( PGconn* );
 
 void test_removal( PGconn* );
 
+void test_playlist_normalization(PGconn* );
+
 #endif
