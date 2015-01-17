@@ -166,10 +166,14 @@ PGresult* removeTrackFromPlaylist( PGconn* conn, std::string track_playlist_id )
  * This function will normalize a playlist so 1.5 will become 2, 2 will become 3, and so on.
  */
 PGresult* normalizePlaylist( PGconn* conn, std::string playlist_id ) {
+
+    char escaped_playlist_id[30];
+
     std::string query = "WITH Sub AS (SELECT id, row_number() OVER (ORDER BY position) FROM tracks_playlists WHERE playlist_id=";
-    char* escaped_playlist_id = PQescapeLiteral( conn, playlist_id.c_str(), playlist_id.length() );
+//    char* escaped_playlist_id = PQescapeLiteral( conn, playlist_id.c_str(), playlist_id.length() );
+    PQescapeStringConn( conn, escaped_playlist_id, playlist_id.c_str(), 30, 0 );
     query.append( escaped_playlist_id );
-    query.append( ") UPDATE tracks_playlists AS Main SET Main.position = Sub.row_number FROM Sub WHERE Main.id = Sub.id;" );
+    query.append( ") UPDATE tracks_playlists AS Main SET position = Sub.row_number FROM Sub WHERE Main.id = Sub.id RETURNING Main.id, Main.track_id, Main.playlist_id, Main.position;" );
 
     PGresult* res = PQexec( conn, query.c_str() );
     return res;
